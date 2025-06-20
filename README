@@ -1,0 +1,51 @@
+FarmTech Solutions - Fase 4
+Este repositório representa a quarta fase do projeto *FarmTech Solutions*, que evolui a aplicação de monitoramento agrícola automatizado utilizando sensores físicos, modelos de Machine Learning, dashboards interativos e integração com banco de dados.
+---
+Funcionalidades implementadas
+
+1. Código C/C++ no ESP32 (Wokwi)
+- Leitura de sensores: DHT22 (temperatura e umidade) e LDR (luminosidade)
+- Display LCD via I2C para mostrar os dados em tempo real
+- Lógica de irrigação automatizada com LEDs de controle
+- Otimização de memória usando tipos apropriados
+- Envio de dados formatados para o *Serial Plotter*
+- Modularização do código e comentários explicativos
+
+ Código Wokwi: [Simular ESP32]
+(https://wokwi.com/projects/431513111234806785)
+
+ 
+
+2. Integração com Serial Plotter
+- Os dados de sensores são enviados no formato:
+- Isso permite o uso direto no Serial Plotter do Wokwi para análise gráfica.
+
+
+Exemplo de saída no Serial Plotter:
+ 
+---
+
+3. Dashboard com Streamlit + Machine Learning
+- Dados simulados com base em distribuições reais
+- Modelo de Árvore de Decisão (Scikit-learn) para prever necessidade de irrigação
+- Interface interativa com sliders para simular condições ambientais
+- Visualização da acurácia do modelo e probabilidade de irrigação
+
+Código do app: `app.py`  
+Interface Streamlit em execução:
+ 
+4. Banco de Dados
+- Banco de dados `farmtech.db` em SQLite
+- Tabela: `leituras_sensor`, que armazena:
+- Temperatura, Umidade, Luminosidade
+- Data/Hora da leitura
+- Status de irrigação (1 = sim / 0 = não)
+- Origem dos dados (ESP32 ou ML)
+Vídeo de Demonstração
+📺 Link do vídeo (YouTube, não listado):
+https://youtu.be/3vtwjbSeM4o
+---
+Equipe & Créditos
+- Desenvolvido por: Murilo de Faria Benhossi
+- Curso: Tecnólogo em Inteligência Artificial - FIAP
+- Fase 4 - Global Solutions 2025
